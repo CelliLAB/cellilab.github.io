@@ -1,38 +1,157 @@
 <!doctype html>
-<html lang="it">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CELLILAB</title>
-<meta name="description" content="CELLILAB, Dott. Renato Celli">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EndoSpine · telemedicina per la chirurgia spinale endoscopica</title>
+<meta name="description" content="EndoSpine: proposta di percorso in telemedicina per la chirurgia spinale endoscopica, dal prericovero al giorno 90. Proposta con dati fittizi. Dott. Renato Celli.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Barlow+Condensed:wght@700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0F2E42;--acc:#84e8d8;--soft:#bcd5de;--rule:rgba(188,213,222,.32);--fg:#fff}
+:root{--bg:#0F2E42;--acc:#84e8d8;--amb:#f4b85a;--soft:#bcd5de;--rule:rgba(188,213,222,.32);--fg:#ffffff}
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,sans-serif;display:flex;align-items:center;justify-content:center;padding:32px 20px}
-main{max-width:560px;width:100%;text-align:center}
-h1{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:clamp(44px,12vw,72px);letter-spacing:.06em;margin:0}
-p.sub{color:var(--soft);letter-spacing:.12em;text-transform:uppercase;font-size:13px;margin:8px 0 40px}
-a.card{display:block;text-decoration:none;color:var(--fg);border:1px solid var(--rule);border-radius:10px;padding:22px 20px;transition:border-color .2s}
-a.card:hover{border-color:var(--acc)}
-a.card b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:24px;letter-spacing:.04em;text-transform:uppercase}
-a.card span{color:var(--soft);font-size:14px}
-a.card em{display:inline-block;margin-top:12px;color:var(--acc);font-style:normal;font-weight:500;font-size:14px}
-footer{margin-top:48px;color:var(--soft);font-size:12px}
-</style>
-</head>
-<body>
-<main>
-<h1>CELLILAB</h1>
-<p class="sub">Dott. Renato Celli</p>
-<a class="card" href="/guida-ai-telemedicina/">
-<b>Guida operativa per l'infermiere</b>
-<span>Intelligenza artificiale e telemedicina in ortopedia</span><br>
-<em>Consulta la guida →</em>
-</a>
-<footer>© 2026 Renato Celli</footer>
-</main>
-</body>
-</html>
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-text-size-adjust:100%;overflow-wrap:break-word}
+.wrap{max-width:42rem;margin:0 auto;padding:0 max(18px,env(safe-area-inset-left)) 0 max(18px,env(safe-area-inset-right))}
+.home{display:inline-block;margin-top:22px;color:var(--soft);font-size:14px;text-decoration:none;letter-spacing:.04em}
+.home:hover{color:var(--acc)}
+header.hero{padding:30px 0 28px;border-bottom:1px solid var(--rule)}
+.kick{font:700 13px/1.3 "Barlow Condensed",Inter,sans-serif;letter-spacing:.14em;color:var(--acc);text-transform:uppercase}
+h1{font:700 clamp(44px,11vw,64px)/1 "Barlow Condensed",Inter,sans-serif;text-transform:uppercase;margin:14px 0 12px;letter-spacing:.02em}
+.sub{color:var(--soft);font-size:15px;letter-spacing:.04em;text-transform:uppercase;margin:0 0 20px}
+.auth{font-size:15px;color:var(--soft);margin:0 0 22px} .auth b{color:#fff;font-weight:600}
+.btn{display:inline-block;background:var(--acc);color:var(--bg);font-weight:700;text-decoration:none;padding:12px 18px;border-radius:8px;margin:0 8px 10px 0}
+.btn.ghost{background:transparent;color:var(--acc);border:1.5px solid var(--acc)}
+nav.toc{margin:26px 0 8px} nav.toc h2{margin-top:0}
+nav.toc ol{list-style:none;padding:0;margin:0}
+nav.toc li a{display:flex;gap:14px;padding:11px 0;border-top:1px solid var(--rule);color:#fff;text-decoration:none}
+nav.toc li:last-child a{border-bottom:1px solid var(--rule)}
+nav.toc li span{font:700 20px/1.1 "Barlow Condensed",sans-serif;color:var(--amb);min-width:28px}
+section{padding:30px 0 6px;border-top:1px solid var(--rule)}
+h2{font:700 clamp(28px,6.5vw,36px)/1.08 "Barlow Condensed",Inter,sans-serif;text-transform:uppercase;margin:6px 0 16px;letter-spacing:.01em;text-wrap:balance}
+h2 .n{color:var(--amb)}
+h3{font:700 18px/1.25 "Barlow Condensed",Inter,sans-serif;color:var(--acc);letter-spacing:.08em;text-transform:uppercase;margin:22px 0 8px}
+p{margin:0 0 14px} b{font-weight:600}
+ul,ol{padding-left:1.2em;margin:0 0 16px} li{margin:0 0 8px}
+a{color:var(--acc)}
+.box{border:1.5px solid var(--amb);padding:16px 18px;margin:18px 0 22px;border-radius:4px}
+.box .rt{display:block;font:700 16px "Barlow Condensed",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--amb);margin-bottom:8px}
+.box p:last-child{margin-bottom:0}
+.steps{list-style:none;padding:0;margin:0 0 18px}
+.steps li{border-top:1px solid var(--rule);padding:14px 0;margin:0}
+.steps li:last-child{border-bottom:1px solid var(--rule)}
+.steps .lb{display:block;font:700 16px "Barlow Condensed",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--amb);margin-bottom:4px}
+.docs{list-style:none;padding:0;margin:0 0 18px}
+.docs li{border-top:1px solid var(--rule);margin:0}
+.docs li:last-child{border-bottom:1px solid var(--rule)}
+.docs a{display:block;padding:13px 0;color:#fff;text-decoration:none}
+.docs a b{display:block;color:var(--acc)}
+.docs a span{color:var(--soft);font-size:14px}
+.bib{font-size:13px;line-height:1.45;margin-bottom:8px;color:rgba(255,255,255,.9);overflow-wrap:anywhere}
+footer{border-top:1px solid var(--rule);margin-top:30px;padding:24px 0 48px;color:var(--soft);font-size:13px;letter-spacing:.04em}
+footer b{color:#fff}
+@media (max-width:520px){body{font-size:16px}}
+</style></head><body>
+<div class="wrap">
+<a class="home" href="/">← CELLILAB</a>
+<header class="hero">
+<div class="kick">Proposta di progetto · dati fittizi</div>
+<h1>EndoSpine</h1>
+<p class="sub">Telemedicina per la chirurgia spinale endoscopica<br>dal prericovero al giorno 90</p>
+<p class="auth"><b>Dott. Renato Celli</b> · novembre 2026</p>
+<div class="box" role="note"><span class="rt">Proposta con dati fittizi</span>
+<p>EndoSpine è una proposta di progetto, non un servizio attivo, e non si riferisce a una struttura sanitaria specifica. Pazienti, numeri organizzativi e dati del prototipo sono inventati. I dati di letteratura sono reali e citati con le fonti. Criteri, soglie e tempi sono proposte da validare con chirurghi, anestesisti e direzione.</p></div>
+<a class="btn" href="prototipo.html">Apri il prototipo</a><a class="btn ghost" href="endospine-proposta-pilota.pdf">Proposta pilota (PDF)</a>
+</header>
+
+<nav class="toc" aria-label="Sommario">
+<h2>Sommario</h2>
+<ol>
+<li><a href="#progetto"><span>01</span>Il progetto</a></li>
+<li><a href="#percorso"><span>02</span>Il percorso</a></li>
+<li><a href="#obiettivi"><span>03</span>Obiettivi</a></li>
+<li><a href="#pilota"><span>04</span>Studio pilota in day surgery</a></li>
+<li><a href="#prototipo"><span>05</span>Il prototipo</a></li>
+<li><a href="#documenti"><span>06</span>Documenti</a></li>
+<li><a href="#limiti"><span>07</span>Limiti</a></li>
+<li><a href="#fonti"><span>08</span>Fonti principali</a></li>
+</ol>
+</nav>
+
+<section id="progetto">
+<h2><span class="n">01</span> Il progetto</h2>
+<p>Le tecniche endoscopiche permettono di trattare ernie del disco e stenosi con un danno minimo ai tessuti e una dimissione rapida. Il paziente torna a casa presto, e con lui si sposta a domicilio anche il rischio delle prime complicanze. EndoSpine propone un percorso in telemedicina che accompagna il paziente prima e dopo l'intervento.</p>
+<ul>
+<li><b>Interventi:</b> decompressioni e discectomie endoscopiche percutanee del rachide toracico e lombare, con tecnica uniportale o biportale (UBE). Il rachide cervicale è escluso.</li>
+<li><b>Strumenti:</b> un'app per il paziente e una dashboard per infermiere, chirurgo e anestesista.</li>
+<li><b>Durata:</b> dalla prima visita al controllo del giorno 90.</li>
+</ul>
+</section>
+
+<section id="percorso">
+<h2><span class="n">02</span> Il percorso</h2>
+<ol class="steps">
+<li><span class="lb">Prima dell'intervento</span>Prima visita chirurgica e visita anestesiologica sempre in presenza. Consensi al trattamento dei dati e alla telemedicina, anamnesi compilata in app e verificata dall'infermiere in teleassistenza (farmaci, istruzioni, prova dell'app). Televisita chirurgica per confermare l'indicazione e fissare la data.</li>
+<li><span class="lb">Prima settimana</span>Controllo quotidiano in app: dolore alla gamba e alla schiena, domande sui segni d'allarme, questionario ODI a giorni alterni, foto della ferita. Il paziente invia solo la foto: la valuta il chirurgo nei primi 7 giorni, poi l'infermiere.</li>
+<li><span class="lb">Fino al giorno 90</span>Controlli ai giorni 14, 30 e 90 con televisita del chirurgo. Gli allarmi arrivano in dashboard con una priorità: presa in carico proposta entro 6 ore se alta, entro 24 ore se media.</li>
+<li><span class="lb">In emergenza</span>Debolezza nuova a una gamba, disturbi a urinare o trattenere feci e urine, febbre alta o mal di testa forte: l'app indica di chiamare subito il 112.</li>
+</ol>
+</section>
+
+<section id="obiettivi">
+<h2><span class="n">03</span> Obiettivi</h2>
+<ul>
+<li><b>Sicurezza:</b> riconoscere e gestire in tempo le complicanze, dalla dimissione al giorno 90.</li>
+<li><b>Servizio di telemedicina attivo:</b> un percorso che funziona davvero, dal prericovero al giorno 90.</li>
+</ul>
+<p>I valori da raggiungere non sono fissati a priori: si misurano prima i valori di partenza in 3 mesi di sperimentazione, poi si definiscono gli obiettivi con il gruppo clinico.</p>
+</section>
+
+<section id="pilota">
+<h2><span class="n">04</span> Studio pilota in day surgery</h2>
+<p>La proposta prevede uno studio pilota di fattibilità e sicurezza: interventi concentrati in una giornata dedicata, dimissione nello stesso giorno e prericovero e follow-up gestiti in telemedicina.</p>
+<ul>
+<li><b>Rodaggio:</b> i primi 10 pazienti seguono il percorso completo ma vengono dimessi la mattina dopo.</li>
+<li><b>Pilota:</b> circa 3 mesi, 50-70 pazienti stimati, con revisione della sicurezza dopo i primi 10.</li>
+<li><b>Esito principale:</b> pazienti dimessi in giornata senza ricovero né accesso in pronto soccorso nei 30 giorni, e percorso a distanza completato.</li>
+<li><b>Nodi da sciogliere:</b> lo stato regolatorio dell'app come possibile dispositivo medico (regolamento MDR) e il regime di ricovero, perché la discectomia non è negli elenchi nazionali di day surgery.</li>
+</ul>
+</section>
+
+<section id="prototipo">
+<h2><span class="n">05</span> Il prototipo</h2>
+<p>Il prototipo mostra come potrebbe funzionare il prodotto finito: app del paziente (prima e dopo l'intervento) e dashboard con agenda, allarmi, prericovero, televisite, andamento clinico ed esiti. Si possono cambiare ruolo e tecnica e provare i flussi.</p>
+<p>Tutti i dati sono inventati. Le azioni restano salvate solo sul dispositivo che stai usando e nessun dato viene inviato.</p>
+<a class="btn" href="prototipo.html">Apri il prototipo</a>
+</section>
+
+<section id="documenti">
+<h2><span class="n">06</span> Documenti</h2>
+<ul class="docs">
+<li><a href="endospine-proposta-pilota.pdf"><b>Proposta di studio pilota</b><span>2 pagine · sintesi per il confronto con chirurgo e anestesista · PDF</span></a></li>
+<li><a href="endospine-sinossi-protocollo.pdf"><b>Sinossi del protocollo</b><span>4 pagine · obiettivi, criteri, esiti, sicurezza, aspetti regolatori · PDF</span></a></li>
+<li><a href="endospine-indicatori-criteri.pdf"><b>Indicatori, criteri e percorso</b><span>17 pagine · documento di lavoro con catalogo indicatori ed evidenze · PDF</span></a></li>
+<li><a href="prototipo.html"><b>Prototipo interattivo</b><span>app paziente e dashboard · dati fittizi</span></a></li>
+</ul>
+</section>
+
+<section id="limiti">
+<h2><span class="n">07</span> Limiti</h2>
+<ul>
+<li>È una proposta: criteri, soglie e tempi di risposta non sono ancora validati da un gruppo clinico.</li>
+<li>Le evidenze sul follow-up digitale e sulla day surgery endoscopica vengono da pochi centri, quasi tutti all'estero e con studi retrospettivi.</li>
+<li>Il prototipo non è stato provato con pazienti reali né con lettori di schermo.</li>
+<li>L'app non sostituisce il 112, la prima visita in presenza né il giudizio clinico.</li>
+</ul>
+</section>
+
+<section id="fonti">
+<h2><span class="n">08</span> Fonti principali</h2>
+<p class="bib">Conferenza Stato-Regioni. Indicazioni nazionali per l'erogazione di prestazioni in telemedicina, 17 dicembre 2020.</p>
+<p class="bib">Conferenza Stato-Regioni. Linee guida per le attività di day surgery, 1 agosto 2002.</p>
+<p class="bib">Cao J et al. Day surgery per discectomia endoscopica percutanea. Medicine 2019. <a href="https://doi.org/10.1097/MD.0000000000018064">doi:10.1097/MD.0000000000018064</a></p>
+<p class="bib">Alexander N, Gardocki R. Discectomia endoscopica transforaminale in centro ambulatoriale. Eur Spine J 2023. <a href="https://doi.org/10.1007/s00586-023-07786-2">doi:10.1007/s00586-023-07786-2</a></p>
+<p class="bib">Rodrigues S et al. Decompressione biportale ambulatoriale in pazienti di 75 anni e oltre. Eur Spine J 2026. <a href="https://doi.org/10.1007/s00586-026-10338-z">doi:10.1007/s00586-026-10338-z</a></p>
+<p class="bib">L'elenco completo è nel documento <a href="endospine-indicatori-criteri.pdf">Indicatori, criteri e percorso</a>.</p>
+</section>
+
+<footer><b>EndoSpine</b> · proposta con dati fittizi, non riferita a una struttura sanitaria specifica<br>© 2026 Renato Celli · <a href="/">cellilab.it</a></footer>
+</div>
+</body></html>
